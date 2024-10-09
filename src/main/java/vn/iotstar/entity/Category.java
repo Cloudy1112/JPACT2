@@ -2,7 +2,6 @@ package vn.iotstar.entity;
 
 import java.io.Serializable;
 import java.util.List;
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
@@ -25,7 +24,7 @@ public class Category implements Serializable {
 
 	@Column(name = "CategoryName", columnDefinition = "nvarchar(50) not null")
 	@NotEmpty(message = "Không được phép rỗng")
-	private String catgoryname;
+	private String categoryname;
 
 	@Column(name = "Images", columnDefinition = "nvarchar(500) null")
 	private String images;

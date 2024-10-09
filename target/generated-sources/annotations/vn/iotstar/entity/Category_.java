@@ -10,7 +10,7 @@ public abstract class Category_ {
 
 	public static final String IMAGES = "images";
 	public static final String QUERY_CATEGORY_FIND_ALL = "Category.findAll";
-	public static final String CATGORYNAME = "catgoryname";
+	public static final String CATEGORYNAME = "categoryname";
 	public static final String VIDEOS = "videos";
 	public static final String CATEGORYID = "categoryid";
 	public static final String STATUS = "status";
@@ -22,9 +22,9 @@ public abstract class Category_ {
 	public static volatile SingularAttribute<Category, String> images;
 	
 	/**
-	 * @see vn.iotstar.entity.Category#catgoryname
+	 * @see vn.iotstar.entity.Category#categoryname
 	 **/
-	public static volatile SingularAttribute<Category, String> catgoryname;
+	public static volatile SingularAttribute<Category, String> categoryname;
 	
 	/**
 	 * @see vn.iotstar.entity.Category#videos

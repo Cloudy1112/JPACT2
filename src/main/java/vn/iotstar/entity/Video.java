@@ -1,9 +1,6 @@
 package vn.iotstar.entity;
 
-import java.util.List;
-
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 
 @Entity
