@@ -20,7 +20,7 @@ import vn.iotstar.utils.Constant;
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, // 1MB
 		maxFileSize = 1024 * 1024 * 5, // 5MB
 		maxRequestSize = 1024 * 1024 * 5 * 5)
-@WebServlet(urlPatterns = { "/admin/categories", "/admin/category/add", "/admin/category/insert",
+@WebServlet(urlPatterns = { "/admin/categories","/admin/category", "/admin/category/add", "/admin/category/insert",
 		"/admin/category/delete", "/admin/category/update", "/admin/category/edit" })
 public class CategoryController extends HttpServlet {
 
@@ -116,7 +116,7 @@ public class CategoryController extends HttpServlet {
 			resp.sendRedirect(req.getContextPath() + "/admin/categories");
 			
 			//Xu li UPDATE
-		} else if (url.contains("/update")) {
+		} else if (url.contains("/admin/category/update")) {
 			// lay du lieu tu view
 			String categoryname = req.getParameter("categoryname");
 			int status = Integer.parseInt(req.getParameter("status"));

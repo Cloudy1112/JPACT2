@@ -44,4 +44,8 @@ public class CategoryService implements ICategoryService {
 		catedao.insert(category);
 	}
 
+	public int count() {
+		return catedao.count();
+	}
+
 }

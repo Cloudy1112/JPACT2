@@ -4,10 +4,12 @@ import java.util.List;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Query;
 import jakarta.persistence.TypedQuery;
 import vn.iotstar.configs.JPAConfig;
 import vn.iotstar.dao.ICategoryDao;
 import vn.iotstar.entity.Category;
+
 
 public class CategoryDao implements ICategoryDao {
 
@@ -92,5 +94,16 @@ public class CategoryDao implements ICategoryDao {
 		query.setParameter("catename", "%" + catname + "%");
 		return query.getResultList();
 	}
+	
+	@Override
+	public int count() {
+		EntityManager enma = JPAConfig.getEntityManager();
+		String jpql = "SELECT count(c) FROM Category c";
+		Query query = enma.createQuery(jpql);
+		return ((Long) query.getSingleResult()).intValue();
+
+	}
+
+	
 
 }

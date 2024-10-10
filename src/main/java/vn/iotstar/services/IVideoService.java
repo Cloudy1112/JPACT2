@@ -1,11 +1,10 @@
-package vn.iotstar.dao;
+package vn.iotstar.services;
 
 import java.util.List;
 
 import vn.iotstar.entity.Video;
 
-public interface IVideoDao {
-
+public interface IVideoService {
 	Video findByTitle(String title);
 
 	List<Video> findAll();
@@ -17,5 +16,6 @@ public interface IVideoDao {
 	void delete(String id) throws Exception;
 
 	void insert(Video video);
-
+	
+	
 }

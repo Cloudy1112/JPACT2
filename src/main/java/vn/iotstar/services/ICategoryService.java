@@ -16,4 +16,6 @@ public interface ICategoryService {
 	void update(Category category);
 
 	void insert(Category category);
+	
+	int count();
 }

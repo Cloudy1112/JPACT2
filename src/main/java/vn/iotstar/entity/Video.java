@@ -17,7 +17,7 @@ public class Video {
 	private int active;
 	@Column(name = "Description", columnDefinition = "nvarchar(50) null")
 	private String description;
-	@Column(name = "Poster", columnDefinition = "nvarchar(50) null")
+	@Column(name = "Poster", columnDefinition = "nvarchar(500) null")
 	private String poster;
 	@Column(name = "Title", columnDefinition = "nvarchar(50) null")
 	private String title;
@@ -25,8 +25,6 @@ public class Video {
 	private int views;
 
 	//bi-directional many-to-one association to Category
-
-
 	 @ManyToOne
 	 @JoinColumn(name="CategoryId")
 	 private Category category;

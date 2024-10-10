@@ -18,4 +18,6 @@ public interface ICategoryDao {
 
 	void insert(Category category);
 
+	int count();
+
 }
